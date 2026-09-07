@@ -1,0 +1,10 @@
+{
+  "name": "Scholar",
+  "short_name": "Scholar",
+  "description": "Understand more. Remember better. Learn deeper.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1B3A6B",
+  "icons": []
+}

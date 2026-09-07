@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Geist via CDN with an immediate system-font fallback stack — if this
+   fails to load (e.g. offline), --font-geist below still resolves. */
+@font-face {
+  font-family: "Geist";
+  src: url("https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.1.1/files/geist-sans-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.1.1/files/geist-sans-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  --font-geist: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+/* Visible keyboard focus everywhere (accessibility §41) */
+:focus-visible {
+  outline: 2px solid #1B3A6B;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
